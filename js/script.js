@@ -38,14 +38,14 @@ var quotes = [
 
 console.log(quotes);
 
-
-
-/***
-  Create the `getRandomQuote` function to:
-   - Create a variable to store a random number 
-   - Cse the random number to `return` a random quote object from the `quotes` array.
-***/
-
+//Get a random quote
+function getRandomQuote() {
+  //get a random number between 0 - quotes.length
+  var randomNumber = Math.floor(Math.random() * quotes.length);
+  //Assign randomNumber to a random object
+  var randomQuote = quotes[randomNumber];
+  return randomQuote;
+}
 
 
 
@@ -72,7 +72,7 @@ console.log(quotes);
   comment.
 ***/
 
-document.getElementById('loadQuote').addEventListener("click", printQuote, false);
+//document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
 
 // Remember to delete the comments that came with this file, and replace them with your own code comments.
