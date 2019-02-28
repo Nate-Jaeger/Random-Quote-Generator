@@ -39,11 +39,10 @@ var quotes = [
 function getRandomQuote() {
   //get a random number between 0 and quotes.length
   var randomNumber = Math.floor(Math.random() * quotes.length);
-  //Assign randomNumber to a random object
+  //Assign randomNumber to a random object in quotes array
   var randomQuote = quotes[randomNumber];
   return randomQuote;
 }
-
 
 //Get randomQuote to print to screen
 function printQuote() {
@@ -71,15 +70,5 @@ function printQuote() {
 }
 
 
-
-/***
-  When the "Show another quote" button is clicked, the event listener 
-  below will be triggered, and it will call, or "invoke", the `printQuote` 
-  function. So do not make any changes to the line of code below this 
-  comment.
-***/
-
+//Listen for a click event on the quote button
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
-
-
-// Remember to delete the comments that came with this file, and replace them with your own code comments.
