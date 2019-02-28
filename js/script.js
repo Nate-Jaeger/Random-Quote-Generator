@@ -3,7 +3,7 @@
 //Array of quote objects
 var quotes = [
   {
-    quote: "Every accomplishment stats with the decision to try.",
+    quote: "Every accomplishment starts with the decision to try.",
     source: "John F. Kennedy",
   },
   {
@@ -36,8 +36,6 @@ var quotes = [
   },
 ];
 
-console.log(quotes);
-
 //Get a random quote
 function getRandomQuote() {
   //get a random number between 0 - quotes.length
@@ -48,20 +46,30 @@ function getRandomQuote() {
 }
 
 
+//Get randomQuote to print to screen
+function printQuote() {
+  var randomQuote = getRandomQuote();
+  var html = '';
 
-/***
-  Create the `printQuote` function to: 
-   - Call the `getRandomQuote` function and assign it to a variable.
-   - Create a variable for the HTML string and set it equal to an empty string.
-   - Use the HTML template in the instructions or the markup in the index.html file, AND 
-     the random quote vairable to build your HTML string.
-   - Add the quote and source section to the HTML string.
-   - Use an if statement to check for the citation property before adding it to the HTML string.
-   - Use an if statement to check for the year property before adding it to the HTML string.
-   - Don't forget to close that final `p` tag.
-   - Set the `innerHTML` of the `quote-box` div to the HTML string. 
-***/
+  //Give html string the quote & source properties to display
+  html += '<p class="quote">' + randomQuote.quote + '</p>';
+  html += '<p class="source">' + randomQuote.source;
 
+  //check if quote object has a citation property and then add it to HTML string
+  if(randomQuote.citation){
+    html += '<span class="citation">' + randomQuote.citation + '</span>';
+  }
+  //Check if quote has a year property then add it to HTML string
+  if(randomQuote.year){
+    html += '<span class="year">' + randomQuote.year + '</span>';
+  }
+  //Close opening P tag from source, nesting citation and year in the same paragraph
+  html += '</p>';
+
+  console.log(html);
+    
+  document.getElementById('quote-box').innerHTML = html;
+}
 
 
 
@@ -72,7 +80,7 @@ function getRandomQuote() {
   comment.
 ***/
 
-//document.getElementById('loadQuote').addEventListener("click", printQuote, false);
+document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
 
 // Remember to delete the comments that came with this file, and replace them with your own code comments.
