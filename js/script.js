@@ -36,9 +36,8 @@ var quotes = [
   },
 ];
 
-//Get a random quote
 function getRandomQuote() {
-  //get a random number between 0 - quotes.length
+  //get a random number between 0 and quotes.length
   var randomNumber = Math.floor(Math.random() * quotes.length);
   //Assign randomNumber to a random object
   var randomQuote = quotes[randomNumber];
