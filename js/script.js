@@ -1,20 +1,42 @@
-/******************************************
-Treehouse FSJS Techdegree:
-project 1 - A Random Quote Generator
-******************************************/
-
 // Study guide for this project - https://drive.google.com/file/d/1s5grutGuQFwJcQP8bFwEI69Q8FCkGdDk/view?usp=sharing
 
+//Array of quote objects
+var quotes = [
+  {
+    quote: "Every accomplishment stats with the decision to try.",
+    source: "John F. Kennedy",
+  },
+  {
+    quote: "A man is but a product of his thoughts. What he thinks, he becomes.",
+    source: "Mahatma Gandhi",
+  },
+  {
+    quote: "There are no great limits to growth because there are no limits of human intelligence, imagination, and wonder.",
+    source: "Ronald Reagan",
+  },
+  {
+    quote: "When something is important enough, you do it even if the odds are not in your favor.",
+    source: "Elon Musk",
+  },
+  {
+    quote: "They who dream by day are cognizant of many things which escape those who dream only by night.",
+    source: "Edgar Allan Poe",
+  },
+  {
+    quote: "It’s the possibility of having a dream come true that makes life interesting.",
+    source: "Paulo Coelho",
+    citation: "The Alchemist",
+    year: 1988
+  },
+  {
+    quote: "I don't know what frightens me more, the power that crushes us, or our endless ability to endure it.",
+    source: "Gregory David Roberts",
+    citation: "Shantaram",
+    year: 2003
+  },
+];
 
-/*** 
-  Create the array of quote objects and name it `quotes`.
-  Add at least five quote objects to the `quotes` array.
-  Give each quote object a `quote` and `source` property.
-  Add the `citation` property to at least one object in the array.
-  Add the `year` property to at least one object in the array.
-  Use console.log() to log your array of quotes to the console.
-***/
-
+console.log(quotes);
 
 
 
