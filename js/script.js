@@ -1,5 +1,3 @@
-// Study guide for this project - https://drive.google.com/file/d/1s5grutGuQFwJcQP8bFwEI69Q8FCkGdDk/view?usp=sharing
-
 //Array of quote objects
 var quotes = [
   {
@@ -53,11 +51,11 @@ function printQuote() {
   html += '<p class="quote">' + randomQuote.quote + '</p>';
   html += '<p class="source">' + randomQuote.source;
 
-  //check if quote object has a citation property and then add it to HTML string
+  //check if quote-object has a citation property, add it to HTML string
   if(randomQuote.citation){
     html += '<span class="citation">' + randomQuote.citation + '</span>';
   }
-  //Check if quote has a year property then add it to HTML string
+  //Check if quote-object has a year property, add it to HTML string
   if(randomQuote.year){
     html += '<span class="year">' + randomQuote.year + '</span>';
   }
@@ -70,5 +68,5 @@ function printQuote() {
 }
 
 
-//Listen for a click event on the quote button
+//Listen for a click event on the loadQuote button
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
