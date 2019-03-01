@@ -63,11 +63,15 @@ function printQuote() {
   if(randomQuote.year){
     html += '<span class="year">' + randomQuote.year + '</span>';
   }
+  //Check if quote-object has a tags property, add it to the string
+  if(randomQuote.tags){
+    //Break used for easier readability, tags class added for CSS styling
+    html += '<br><span class="tags">' + randomQuote.tags + '</span>';
+  }
   //Close opening P tag from source, nesting citation and year in the same paragraph
   html += '</p>';
-
-  console.log(html);
-    
+  
+  //Set innerHTML of quote-box
   document.getElementById('quote-box').innerHTML = html;
 }
 

@@ -71,6 +71,10 @@ body {
   font-style: normal;
 }
 
+.tags {
+  font-style: oblique;
+}
+
 #loadQuote {
   position: fixed;
   width: 12em;
