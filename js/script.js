@@ -83,7 +83,7 @@ function printQuote() {
     //Break used for easier readability, tags class added for CSS styling
     html += '<br><span class="tags">' + randomQuote.tags + '</span>';
   }
-  //Close opening P tag from source, nesting citation and year in the same paragraph
+  //Close opening P tag from source, nesting citation, year, and tags in the same paragraph
   html += '</p>';
   
   //Set innerHTML of quote-box
