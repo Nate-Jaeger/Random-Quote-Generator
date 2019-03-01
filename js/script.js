@@ -1,3 +1,7 @@
+//Declare timer that will call printQuote() every 20 seconds
+//Information about setInterval read from: https://www.w3schools.com/js/js_timing.asp 
+const timer = window.setInterval(printQuote, 20000);
+
 //Array of quote objects
 var quotes = [
   {
