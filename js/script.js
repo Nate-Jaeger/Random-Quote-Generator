@@ -43,7 +43,7 @@ var quotes = [
 ];
 
 //Function to create a random RGB value and post that value to background property
-//Information for this previously gotten on Colt Steele's Udemy course 'The Web Developer Bootcamp', Random Color Game project
+//Information for this previously received on Colt Steele's Udemy course 'The Web Developer Bootcamp', Random Color Game project
 function randomBG(){
   var x = Math.floor(Math.random() * 256);
   var y = Math.floor(Math.random() * 256);
