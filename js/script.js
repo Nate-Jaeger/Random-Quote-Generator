@@ -1,6 +1,6 @@
 //Declare timer that will call printQuote() every 20 seconds
 //Information about setInterval read from: https://www.w3schools.com/js/js_timing.asp 
-const timer = window.setInterval(printQuote, 20000);
+const timer = window.setInterval(callFuncs, 20000);
 
 //Array of quote objects
 var quotes = [
@@ -42,6 +42,17 @@ var quotes = [
   },
 ];
 
+//Function to create a random RGB value and post that value to background property
+//Information for this previously gotten on Colt Steele's Udemy course 'The Web Developer Bootcamp', Random Color Game project
+function randomBG(){
+  var x = Math.floor(Math.random() * 256);
+  var y = Math.floor(Math.random() * 256);
+  var z = Math.floor(Math.random() * 256);
+  var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+
+  document.body.style.background = bgColor;
+}
+
 function getRandomQuote() {
   //get a random number between 0 and quotes.length
   var randomNumber = Math.floor(Math.random() * quotes.length);
@@ -79,6 +90,11 @@ function printQuote() {
   document.getElementById('quote-box').innerHTML = html;
 }
 
+//Function to call both printQuote and randomBG, so both can be called on click or setInterval
+function callFuncs() {
+  printQuote();
+  randomBG();
+}
 
 //Listen for a click event on the loadQuote button
-document.getElementById('loadQuote').addEventListener("click", printQuote, false);
+document.getElementById('loadQuote').addEventListener("click", callFuncs, false);
