@@ -43,7 +43,6 @@ var quotes = [
 ];
 
 //Function to create a random RGB value and post that value to background property
-//Information for this previously received on Colt Steele's Udemy course 'The Web Developer Bootcamp', Random Color Game project
 function randomBG(){
   var x = Math.floor(Math.random() * 256);
   var y = Math.floor(Math.random() * 256);
@@ -80,21 +79,18 @@ function printQuote() {
   }
   //Check if quote-object has a tags property, add it to the string
   if(randomQuote.tags){
-    //Break used for easier readability, tags class added for CSS styling
     html += '<br><span class="tags">' + randomQuote.tags + '</span>';
   }
-  //Close opening P tag from source, nesting citation, year, and tags in the same paragraph
+  //Close opening P tag
   html += '</p>';
   
-  //Set innerHTML of quote-box
   document.getElementById('quote-box').innerHTML = html;
 }
 
-//Function to call both printQuote and randomBG, so both can be called on click or setInterval
+//Call both printQuote and randomBG, so both can be called on click or setInterval
 function callFuncs() {
   printQuote();
   randomBG();
 }
 
-//Listen for a click event on the loadQuote button
 document.getElementById('loadQuote').addEventListener("click", callFuncs, false);
