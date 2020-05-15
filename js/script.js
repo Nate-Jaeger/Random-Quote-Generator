@@ -5,9 +5,15 @@ const timer = window.setInterval(callFuncs, 20000);
 
 //Function to create a random RGB value and post that value to background property
 function randomBG(){
-  const x = Math.floor(Math.random() * 256);
-  const y = Math.floor(Math.random() * 256);
-  const z = Math.floor(Math.random() * 256);
+
+  function randNum(){
+    const number = Math.floor(Math.random() * 256);
+    return number;
+  }
+  
+  const x = randNum();
+  const y = randNum();
+  const z = randNum();
   const bgColor = `rgb(${x}, ${y}, ${z})`;
 
   document.body.style.background = bgColor;
