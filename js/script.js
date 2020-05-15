@@ -68,22 +68,22 @@ function printQuote() {
   var html = ``;
 
   //Give html string the quote & source properties to display
-  html += `<p class="quote"> ${randomQuote.quote} </p>`;
-  html += `<p class="source"> ${randomQuote.source}`;
+  html += `<p class="quote">${randomQuote.quote} </p>`;
+  html += `<p class="source">${randomQuote.source}`;
 
   //check if quote-object has a citation property, add it to HTML string
   if(randomQuote.citation){
-    html += `<span class="citation"> ${randomQuote.citation} </span>`;
+    html += `<span class="citation">${randomQuote.citation}</span>`;
   }
 
   //Check if quote-object has a year property, add it to HTML string
   if(randomQuote.year){
-    html += `<span class="year"> ${randomQuote.year} </span>`;
+    html += `<span class="year">${randomQuote.year}</span>`;
   }
 
   //Check if quote-object has a tags property, add it to the string
   if(randomQuote.tags){
-    html += `<br><span class="tags"> ${randomQuote.tags} </span>`;
+    html += `<br><span class="tags">${randomQuote.tags}</span>`;
   }
   //Close opening P tag
   html += `</p>`;
