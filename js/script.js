@@ -32,7 +32,8 @@ var quotes = [
     quote: "It’s the possibility of having a dream come true that makes life interesting.",
     source: "Paulo Coelho",
     citation: "The Alchemist",
-    year: 1988
+    year: 1988,
+    tags: "Inspiration"
   },
   {
     quote: "I don't know what frightens me more, the power that crushes us, or our endless ability to endure it.",
@@ -93,4 +94,5 @@ function callFuncs() {
   randomBG();
 }
 
+callFuncs();
 document.getElementById('loadQuote').addEventListener("click", callFuncs, false);
