@@ -6,6 +6,7 @@ const timer = window.setInterval(callFuncs, 20000);
 //Function to create a random RGB value and post that value to background property
 function randomBG(){
 
+  //Function to generate number between 1-255
   function randNum(){
     const number = Math.floor(Math.random() * 256);
     return number;
@@ -34,7 +35,7 @@ function printQuote() {
   let html = ``;
 
   //Give html string the quote & source properties to display
-  html += `<p class="quote">${randomQuote.quote} </p>`;
+  html += `<p class="quote">${randomQuote.quote}</p>`;
   html += `<p class="source">${randomQuote.source}`;
 
   //check if quote-object has a citation property, add it to HTML string
